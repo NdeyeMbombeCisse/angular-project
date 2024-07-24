@@ -9,5 +9,24 @@ input{
     margin-top: 44px;
 }
 .ajouter{
-    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 60px;
+
+}
+.cardb{
+    background-color: green;
+}
+.list{
+    align-items: center;
+    justify-content: center;
+}
+.main{
+    
+    align-items: center;
+    justify-content: center;
+    margin: 0 60px;
+}
+.block{
+    padding: -16px;
 }

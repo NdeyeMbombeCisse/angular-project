@@ -18,15 +18,12 @@ interface Tache {
 export class TacheComponent implements OnInit {
   taches: Tache[] = [];
 
-  ngOnInit(): void {
-  }
-
   addTache(titre: string, description: string): void {
     if(titre.trim() &&description.trim()){
       this.taches.push({
         titre,
         description,
-        statut: false
+        statut: false,
       });
       
     }else{
@@ -34,8 +31,20 @@ export class TacheComponent implements OnInit {
     }
    
   }
+  ngOnInit(): void {
+  }
+
 
   onSubmit(form: NgForm): void {
     console.log(form);
   }
-}
+
+  confirmer(index:number)  {
+  
+  this.taches[index].statut=true;
+ 
+   
+ 
+
+  }
+  }

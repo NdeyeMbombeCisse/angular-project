@@ -8,29 +8,44 @@
   </head>
   <body>
    
-    
+  <div class="row  main">
+
+<div class="ajouter m-5">
+    <form (ngSubmit)="addTache(titre.value, description.value)" #tacheForm="ngForm">
+    <div class="block">
+        <div class="p">
+            <label  for="titre">Ajouter un titre</label> 
+        </div>
+        <div>
+            <input type="text" name="titre" ngModel #titre="ngModel"> 
+        </div>
+    </div>
+    <div class="block">
+        <div >
+            <label for="description">Ajouter une description</label>
+        </div>
+        <div>
+            <input type="text" name="description" ngModel #description="ngModel">
+    </div>
+</div>
+   
+      <button type="submit" >Ajouter</button>
+    </form>
+</div>  
 <h1>Liste des taches</h1>
 
-<div class="row">
-    <div class="col-sm-6 mb-3 mb-sm-0" *ngFor="let tache of taches">
-      <div class="card">
+<div class="row col-12 container list ">
+    <div class="col-3 p-3 mb-3 mb-sm-0" *ngFor="let tache of taches ; index as i" >
+      <div class="card" [ngClass]="{ 'cardb' :tache.statut}">
         <div class="card-body">
           <h5 class="card-title">{{tache.titre}}</h5>
           <p class="card-text">{{tache.description}}</p>
-          <a href="#" class="btn btn-primary">Marquer comme terminée</a>
+          <button  class="btn btn-primary" (click)="confirmer(i)">Marquer comme terminée</button>
         </div>
       </div>
     </div>
 </div>
 
-<div class="ajouter">
-    <form (ngSubmit)="addTache(titre.value, description.value)" #tacheForm="ngForm">
-      <label for="titre">Ajouter un titre</label>
-      <input type="text" name="titre" ngModel #titre="ngModel"> 
-      <label for="description">Ajouter une description</label>
-      <input type="text" name="description" ngModel #description="ngModel">
-      <button type="submit">Ajouter</button>
-    </form>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
