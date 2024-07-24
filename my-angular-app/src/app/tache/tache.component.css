@@ -1,0 +1,13 @@
+h1{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+input{
+    width: 350px;
+    border-radius: 5px;
+    height: 40px;
+    margin-top: 44px;
+}
+.ajouter{
+    display: flex;
+}
