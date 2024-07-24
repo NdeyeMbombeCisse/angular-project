@@ -18,14 +18,15 @@ interface Tache {
 export class TacheComponent implements OnInit {
   taches: Tache[] = [];
 
-  addTache(titre: string, description: string): void {
+  addTache(titre: string, description: string, form: NgForm): void {
     if(titre.trim() &&description.trim()){
       this.taches.push({
         titre,
         description,
         statut: false,
       });
-      
+      form.reset(); // Réinitialise le formulaire après l'ajout
+
     }else{
       alert('le titre et la descripion sont vides')
     }
