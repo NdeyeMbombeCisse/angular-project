@@ -6,27 +6,10 @@ input{
     width: 350px;
     border-radius: 5px;
     height: 40px;
-    margin-top: 44px;
+    margin-top: 4px;
 }
-.ajouter{
-    align-items: center;
-    justify-content: center;
-    margin: 0 60px;
 
-}
 .cardb{
-    background-color: green;
-}
-.list{
-    align-items: center;
-    justify-content: center;
-}
-.main{
-    
-    align-items: center;
-    justify-content: center;
-    margin: 0 60px;
-}
-.block{
-    padding: -16px;
+    background-color: rgba(0, 128, 0, 0.27);
+    border: 1px solid green !important;
 }
