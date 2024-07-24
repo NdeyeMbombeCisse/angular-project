@@ -15,7 +15,8 @@ input{
 
 }
 .cardb{
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.27);
+    border: 1px solid green !important;
 }
 .list{
     align-items: center;
